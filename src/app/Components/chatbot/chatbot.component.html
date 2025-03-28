@@ -1,0 +1,27 @@
+
+<div class="fixed bottom-5 right-5">
+    <!-- Botón flotante -->
+    <button (click)="toggleChat()" class="bg-blue-500 text-white p-4 rounded-full shadow-lg hover:bg-blue-600 transition">
+      💬
+    </button>
+  
+    <!-- Contenedor del chat (oculto por defecto) -->
+    <div #chatBox class="hidden bg-white shadow-lg rounded-lg p-4 w-80 h-96">
+      <div class="flex justify-between items-center border-b pb-2">
+        <h2 class="text-lg font-semibold text-gray-700">Chat</h2>
+        <button (click)="closeChat()" class="text-gray-500 hover:text-gray-700">✖</button>
+      </div>
+      
+      <div class="h-64 overflow-y-auto p-2 space-y-2">
+        <div *ngFor="let msg of messages" [ngClass]="{'bg-gray-200 text-left': msg.sender === 'bot', 'bg-blue-500 text-white text-right': msg.sender === 'user'}" class="p-2 rounded-lg text-sm">
+          {{ msg.text }}
+        </div>
+      </div>
+  
+      <div class="border-t pt-2 flex">
+        <input #chatInput type="text" [(ngModel)]="userInput" class="w-full p-2 border rounded-l-lg text-gray-700" placeholder="Escribe un mensaje...">
+        <button (click)="sendMessage()" class="bg-blue-500 text-white px-4 rounded-r-lg hover:bg-blue-600 transition">➤</button>
+      </div>
+    </div>
+  </div>
+  
