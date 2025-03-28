@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
 
-  constructor(private authWg: AuthService,private router: Router) { }
+  constructor(private authWg: AuthService, private router: Router) { }
 
   loginWithGoogle() {
     this.authWg.loginWithGoogle().then((result)=>
