@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ChatbotComponent } from '../../Components/chatbot/chatbot.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -9,5 +10,11 @@ import { ChatbotComponent } from '../../Components/chatbot/chatbot.component';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+
+  constructor(private router: Router ) {}
+
+  navigate () {
+    this.router.navigate(['/login']);
+  }
 
 }
