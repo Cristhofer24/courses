@@ -57,44 +57,34 @@
   </section>
 
   <!-- Tabla para Mostrar los Cursos -->
-  <section class="p-6 bg-gray-800 bg-opacity-70 rounded-lg w-3/4">
-    <h2 class="text-3xl font-extrabold text-white mb-6 text-shadow-lg font-[\'Bangers\', cursive]">Cursos de Hardware y Software</h2>
-    <table class="table-auto w-full text-white">
-      <thead>
-        <tr class="bg-yellow-500">
-          <th class="p-2 text-left">Título</th>
-          <th class="p-2 text-left">Video</th>
-          <th class="p-2 text-left">Descripción</th>
-          <th class="p-2 text-left">Acciones</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- Cursos de Hardware -->
-        <tr>
-          <td class="p-2"></td>
-          <td class="p-2"><a  target="_blank" class="text-blue-400 hover:text-blue-600">Ver Video</a></td>
-          <td class="p-2"></td>
-          <td class="p-2">
-            <button class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg" >
-              Eliminar
-            </button>
-          </td>
-        </tr>
+<!-- Tabla para Mostrar los Cursos -->
+<section class="p-6 bg-gray-800 bg-opacity-70 rounded-lg w-3/4 overflow-auto">
+  <h2 class="text-3xl font-extrabold text-white mb-6 text-shadow-lg font-[\'Bangers\', cursive]">Cursos de Hardware y Software</h2>
+  <table class="table-auto w-full text-white">
+    <thead>
+      <tr class="bg-yellow-500">
+        <th class="p-2 text-left">Título</th>
+        <th class="p-2 text-left">Video</th>
+        <th class="p-2 text-left">Descripción</th>
+        <th class="p-2 text-left">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Iterar sobre los cursos y mostrar en la tabla -->
+      <tr *ngFor="let course of courses">
+        <td class="p-2">{{ course.title }}</td>
+        <td class="p-2"><a [href]="course.link" target="_blank" class="text-blue-400 hover:text-blue-600">Ver Video</a></td>
+        <td class="p-2">{{ course.description }}</td>
+        <td class="p-2">
+          <button class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg" (click)="deleteCourse(course.id)" >
+            Eliminar
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
 
-        <!-- Cursos de Software -->
-        <tr>
-          <td class="p-2">¿</td>
-          <td class="p-2"><a  target="_blank" class="text-blue-400 hover:text-blue-600">Ver Video</a></td>
-          <td class="p-2"></td>
-          <td class="p-2">
-            <button class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg" >
-              Eliminar
-            </button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
 </main>
 
 <style>
