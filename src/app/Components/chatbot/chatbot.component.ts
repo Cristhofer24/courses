@@ -30,7 +30,7 @@ export class ChatbotComponent {
     "me interesa el hardware":"El harware es todo componente fisico de una computadora en nuestro curso aprenderas su estructura y funcionamiento asi como micro elecrtonica y circuitos electricos",
     "quiero el curso de hardware":"El harware es todo componente fisico de una computadora en nuestro curso aprenderas su estructura y funcionamiento asi como micro elecrtonica y circuitos electricos",
     "quiero el del hardware":"El harware es todo componente fisico de una computadora en nuestro curso aprenderas su estructura y funcionamiento asi como micro elecrtonica y circuitos electricos",
-    "harware":"El hardware es todo componente fisico de una computadora en nuestro curso aprenderas su estructura y funcionamiento asi como micro elecrtonica y circuitos electricos",
+    "hardware":"El hardware es todo componente fisico de una computadora en nuestro curso aprenderas su estructura y funcionamiento asi como micro elecrtonica y circuitos electricos",
     "¿que es el hardware?":"El harware es todo componente fisico de una computadora en nuestro curso aprenderas su estructura y funcionamiento asi como micro elecrtonica y circuitos electricos",
     "que es el hardware?":"El harware es todo componente fisico de una computadora en nuestro curso aprenderas su estructura y funcionamiento asi como micro elecrtonica y circuitos electricos",
     "quiero el curso de software":" el software  es el sistema operativo de una computadora  en nuestro curso aprenderas su estructura y funcionamiento asi como sus diferentes lenguajes y frameworks",
@@ -53,6 +53,7 @@ export class ChatbotComponent {
     "y tu radar":"eso no se pregunta insecto, insisto esto es una plataforma educativa",
     "adiós": "¡Hasta luego! 😊 e inscribete insecto!",
     "adios": "¡Hasta luego! 😊 e inscribete insecto!",
+    "hola guapo":"deja de faltarme el respeto insecto verde, mejor inscribete en nuestro cursos",
 
     "default": "Lo siento, no entiendo la pregunta."
   };
