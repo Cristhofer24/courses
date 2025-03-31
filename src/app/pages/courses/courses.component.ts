@@ -12,6 +12,13 @@ import { Router } from '@angular/router';
 export class CoursesComponent {
 constructor(private auth:AuthService , private router:Router  ){}
 
+hardware(){
+  this.router.navigate(['/hardware']);
+}
+softwa(){
+  this.router.navigate(['/software']);
+}
+
 logOut(){
   this.auth.logOut().then(
     ()=> this.router.navigate(['/home'])
