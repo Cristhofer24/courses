@@ -9,6 +9,7 @@ import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
 import { RegisterComponent } from './Auth/register/register.component';
 import { SoftwareComponent } from './pages/software/software.component';
 import { CrudComponent } from './pages/crud/crud.component';
+import { VideoComponent } from './pages/video/video.component';
 
 
 
@@ -20,15 +21,16 @@ export const routes: Routes = [
     {path:'about', component:AbaoutComponent},
     {path:'contact', component:ContactComponent},
     {path:'register', component:RegisterComponent},
-    {path:'hardware', component:HardwareComponent},
-    {path:'software', component:SoftwareComponent},
+    
     { path: '', redirectTo: '/home', pathMatch: 'full' }
 
    ]
   },
-
+      {path:'hardware', component:HardwareComponent},
+      {path:'software', component:SoftwareComponent},
       {path:'courses',component:CoursesComponent},
       {path:'crud',component:CrudComponent},
+      {path:'video',component:VideoComponent},
 
 
   { path: '**', redirectTo: '/home'}
