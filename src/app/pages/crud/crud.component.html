@@ -1,0 +1,112 @@
+<main class="bg-gradient-to-t from-yellow-600 via-orange-600 to-red-600 h-screen flex flex-col items-center justify-center space-y-6 relative overflow-hidden">
+
+  <!-- Título Principal -->
+  <h1 class="text-5xl font-extrabold text-white mb-6 text-shadow-lg font-[\'Bangers\', cursive]">
+    Dragon Ball Z - Gestión de Cursos
+  </h1>
+
+  <!-- Botón Cerrar Sesión -->
+  <button  type="button" class="absolute top-4 right-4 bg-red-700 hover:bg-red-800 text-white font-bold py-2 px-6 rounded-full shadow-xl flex items-center gap-3">
+    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12H4m12 0-4 4m4-4-4-4m3-4h2a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3h-2"/>
+    </svg>
+    Cerrar Sesión
+  </button>
+
+  <!-- Formularios para Agregar Cursos -->
+  <section class="grid grid-cols-1 sm:grid-cols-2 gap-6 p-6 bg-gray-800 bg-opacity-70 rounded-lg w-3/4 animate-slide-in">
+    <!-- Formulario para Curso de Hardware -->
+    <div class="flex flex-col justify-center items-center">
+      <h2 class="text-3xl font-extrabold text-white mb-4 text-shadow-lg font-[\'Bangers\', cursive]">Agregar Curso de Hardware</h2>
+
+      <!-- Campo Título -->
+      <input type="text" id="hardwareTitle" placeholder="Título del Curso de Hardware" class="p-2 mb-4 rounded-lg w-full bg-yellow-200 text-black font-bold" />
+
+      <!-- Campo URL de Video -->
+      <input type="url" id="hardwareUrl" placeholder="URL del Video de YouTube" class="p-2 mb-4 rounded-lg w-full bg-yellow-200 text-black font-bold" />
+
+      <!-- Campo Descripción -->
+      <textarea id="hardwareDescription" placeholder="Descripción del Curso" class="p-2 mb-4 rounded-lg w-full bg-yellow-200 text-black font-bold"></textarea>
+
+      <!-- Botón Agregar Curso de Hardware -->
+      <button class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-6 rounded-lg shadow-lg">
+        Agregar Curso de Hardware
+      </button>
+    </div>
+
+    <!-- Formulario para Curso de Software -->
+    <div class="flex flex-col justify-center items-center">
+      <h2 class="text-3xl font-extrabold text-white mb-4 text-shadow-lg font-[\'Bangers\', cursive]">Agregar Curso de Software</h2>
+      <form [formGroup]="form" (ngSubmit)="addCourseSoftware()">
+          <!-- Campo Título -->
+      <input type="text" id="softwareTitle"   formControlName="title"   placeholder="Título del Curso de Software" class="p-2 mb-4 rounded-lg w-full bg-yellow-200 text-black font-bold" />
+
+      <!-- Campo URL de Video -->
+      <input type="url" id="softwareUrl"    formControlName="link"     placeholder="URL del Video de YouTube" class="p-2 mb-4 rounded-lg w-full bg-yellow-200 text-black font-bold" />
+
+      <!-- Campo Descripción -->
+      <textarea id="softwareDescription"      formControlName="description" placeholder="Descripción del Curso" class="p-2 mb-4 rounded-lg w-full bg-yellow-200 text-black font-bold"></textarea>
+
+      <!-- Botón Agregar Curso de Software -->
+      <button  type="submit" class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-6 rounded-lg shadow-lg" >
+        Agregar Curso de Software
+      </button>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- Tabla para Mostrar los Cursos -->
+  <section class="p-6 bg-gray-800 bg-opacity-70 rounded-lg w-3/4">
+    <h2 class="text-3xl font-extrabold text-white mb-6 text-shadow-lg font-[\'Bangers\', cursive]">Cursos de Hardware y Software</h2>
+    <table class="table-auto w-full text-white">
+      <thead>
+        <tr class="bg-yellow-500">
+          <th class="p-2 text-left">Título</th>
+          <th class="p-2 text-left">Video</th>
+          <th class="p-2 text-left">Descripción</th>
+          <th class="p-2 text-left">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Cursos de Hardware -->
+        <tr>
+          <td class="p-2"></td>
+          <td class="p-2"><a  target="_blank" class="text-blue-400 hover:text-blue-600">Ver Video</a></td>
+          <td class="p-2"></td>
+          <td class="p-2">
+            <button class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg" >
+              Eliminar
+            </button>
+          </td>
+        </tr>
+
+        <!-- Cursos de Software -->
+        <tr>
+          <td class="p-2">¿</td>
+          <td class="p-2"><a  target="_blank" class="text-blue-400 hover:text-blue-600">Ver Video</a></td>
+          <td class="p-2"></td>
+          <td class="p-2">
+            <button class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg" >
+              Eliminar
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</main>
+
+<style>
+@keyframes slide-in {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.animate-slide-in {
+  animation: slide-in 1s ease-out;
+}
+
+.text-shadow-lg {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+</style>
