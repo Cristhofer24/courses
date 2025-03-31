@@ -28,41 +28,33 @@
       </button>
   </div>
 
-  <section
-    class="grid grid-cols-1 sm:grid-cols-2 gap-6 p-6 bg-gray-800 bg-opacity-70 rounded-lg w-3/4 animate-slide-in"
-  >
-   
+  <section class="grid grid-cols-1 sm:grid-cols-2 gap-6 p-6 bg-gray-800 bg-opacity-70 rounded-lg w-3/4 animate-slide-in">
     <div class="bg-gray-700 p-4 rounded-lg text-white">
-      <a href="#">
-        <img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" class="mt-4 rounded-lg shadow-lg"/>
+      <!-- Miniatura del video de YouTube -->
+      <a (click)="goToVideo()" class="cursor-pointer">
+        <img class="rounded-t-lg w-full h-48 object-cover" 
+             src="https://img.youtube.com/vi/TU_ID_DE_VIDEO/hqdefault.jpg" 
+             alt="Miniatura del video">
       </a>
+  
       <div class="p-5">
-        <a href="#">
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"> Noteworthy technology acquisitions 2021</h5>
+        <a (click)="goToVideo()" class="cursor-pointer">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Introducción a Java 2025</h5>
         </a>
-
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-          Here are the biggest enterprise technology acquisitions of 2021 so
-          far, in reverse chronological order.
+        <p class="mb-3 font-normal text-gray-300">
+          Aprende la historia de Java, sus diferentes funciones y aplicaciones en el entorno profesional.
         </p>
-        <a (click)="goToVideo()" type="button" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" >
-          Empezar Curso          
-          <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M1 5h12m0 0L9 1m4 4L9 9"
-            />
+        <button (click)="goToVideo()"
+           class="flex items-center justify-center bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-lg focus:ring-4 focus:outline-none focus:ring-yellow-300 transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1">
+          Empezar Curso
+          <svg class="w-4 h-4 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
           </svg>
-        </a>
+        </button>
       </div>
     </div>
-
-    
-   
   </section>
+  
 
   <section
     class="w-3/4 p-6 bg-gray-900 bg-opacity-80 rounded-lg animate-slide-in space-y-6 overflow-y-auto max-h-[70vh]"
