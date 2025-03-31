@@ -4,10 +4,13 @@ import { LoginComponent } from './Auth/login/login.component';
 import { AbaoutComponent } from './pages/abaout/abaout.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { CoursesComponent } from './pages/courses/courses.component';
-
+import { HardwareComponent } from './pages/hardware/hardware.component';
 import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
 import { RegisterComponent } from './Auth/register/register.component';
+import { SoftwareComponent } from './pages/software/software.component';
 import { CrudComponent } from './pages/crud/crud.component';
+
+
 
 export const routes: Routes = [
   {path:'',component:NavBarComponent,
@@ -17,6 +20,8 @@ export const routes: Routes = [
     {path:'about', component:AbaoutComponent},
     {path:'contact', component:ContactComponent},
     {path:'register', component:RegisterComponent},
+    {path:'hardware', component:HardwareComponent},
+    {path:'software', component:SoftwareComponent},
     { path: '', redirectTo: '/home', pathMatch: 'full' }
 
    ]
