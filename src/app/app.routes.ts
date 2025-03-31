@@ -4,9 +4,10 @@ import { LoginComponent } from './Auth/login/login.component';
 import { AbaoutComponent } from './pages/abaout/abaout.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { CoursesComponent } from './pages/courses/courses.component';
-import { NavBarCoursesComponent } from './Components/nav-bar-courses/nav-bar-courses.component';
+
 import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
 import { RegisterComponent } from './Auth/register/register.component';
+import { CrudComponent } from './pages/crud/crud.component';
 
 export const routes: Routes = [
   {path:'',component:NavBarComponent,
@@ -21,11 +22,10 @@ export const routes: Routes = [
    ]
   },
 
-  {path:'',component:NavBarCoursesComponent,
-    children:[
-      {path:'courses',component:CoursesComponent}
-    ]
-  },
+      {path:'courses',component:CoursesComponent},
+      {path:'crud',component:CrudComponent},
+
+
   { path: '**', redirectTo: '/home'}
 
 
