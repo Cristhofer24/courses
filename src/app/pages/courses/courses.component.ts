@@ -15,7 +15,7 @@ constructor(private auth:AuthService , private router:Router  ){}
 hardware(){
   this.router.navigate(['/hardware']);
 }
-softwa(){
+software(){
   this.router.navigate(['/software']);
 }
 
