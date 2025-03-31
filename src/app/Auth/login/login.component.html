@@ -1,36 +1,99 @@
-<main class="h-screen bg-gradient-to-r from-yellow-300 via-yellow-50 to-yellow-300 animate-gradient-x">
-
+<main
+  class="h-screen bg-gradient-to-r from-yellow-300 via-yellow-50 to-yellow-300 animate-gradient-x"
+>
   <section>
-    <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-      <div class="w-full bg-gradient-to-r from-blue-500 via-blue-400 to-blue-500 shadow-lg shadow-gray-900 rounded-lg md:mt-0 sm:max-w-md xl:p-0 transform transition-all duration-500 hover:scale-105">
+    <div
+      class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0"
+    >
+      <div
+        class="w-full bg-gradient-to-r from-blue-500 via-blue-400 to-blue-500 shadow-lg shadow-gray-900 rounded-lg md:mt-0 sm:max-w-md xl:p-0 transform transition-all duration-500 hover:scale-105"
+      >
         <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
-          <div class="flex justify-center items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white animate-pulse">
-            <img class="w-20 h-20 mr-2 transition-transform duration-300 hover:rotate-360" src="/assets/img/logo.png" alt="logo">
+          <div
+            class="flex justify-center items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white animate-pulse"
+          >
+            <img
+              class="w-20 h-20 mr-2 transition-transform duration-300 hover:rotate-360"
+              src="/assets/img/logo.png"
+              alt="logo"
+            />
             <span class="animate-pulse">Iniciar Sesión</span>
           </div>
           <form class="space-y-4 md:space-y-6" (ngSubmit)="loginWithEmail()">
-            <div class="transition-all duration-300 transform hover:scale-[1.01]">
-              <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Correo Electronico</label>
-              <input [(ngModel)]="user.email" type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 transition-all duration-300 focus:ring-2 focus:ring-blue-400" placeholder="example@company.com" required="">
+            <div
+              class="transition-all duration-300 transform hover:scale-[1.01]"
+            >
+              <label
+                for="email"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >Correo Electronico</label
+              >
+              <input
+                [(ngModel)]="user.email"
+                type="email"
+                name="email"
+                id="email"
+                class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 transition-all duration-300 focus:ring-2 focus:ring-blue-400"
+                placeholder="example@company.com"
+                required=""
+              />
             </div>
-            <div class="transition-all duration-300 transform hover:scale-[1.01]">
-              <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Contraseña</label>
-              <input [(ngModel)]="user.password"  type="password" name="password" id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 transition-all duration-300 focus:ring-2 focus:ring-blue-400" required="">
+            <div
+              class="transition-all duration-300 transform hover:scale-[1.01]"
+            >
+              <label
+                for="password"
+                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                >Contraseña</label
+              >
+              <input
+                [(ngModel)]="user.password"
+                type="password"
+                name="password"
+                id="password"
+                placeholder="••••••••"
+                class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 transition-all duration-300 focus:ring-2 focus:ring-blue-400"
+                required=""
+              />
             </div>
 
-            <button type="submit" class="w-full text-white bg-green-500 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1">
+            <button
+              type="submit"
+              class="w-full text-white bg-green-500 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
+            >
               Iniciar Sesión
             </button>
 
-            <button (click)="loginWithGoogle()" type="button" class="w-full text-white bg-yellow-600 hover:bg-yellow-700 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center flex justify-center items-center transition-all duration-300 hover:shadow-lg hover:shadow-yellow-500/50 transform hover:-translate-y-1">
-              <svg class="w-4 h-4 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 19">
-                <path fill-rule="evenodd" d="M8.842 18.083a8.8 8.8 0 0 1-8.65-8.948 8.841 8.841 0 0 1 8.8-8.652h.153a8.464 8.464 0 0 1 5.7 2.257l-2.193 2.038A5.27 5.27 0 0 0 9.09 3.4a5.882 5.882 0 0 0-.2 11.76h.124a5.091 5.091 0 0 0 5.248-4.057L14.3 11H9V8h8.34c.066.543.095 1.09.088 1.636-.086 5.053-3.463 8.449-8.4 8.449l-.186-.002Z" clip-rule="evenodd"/>
+            <button
+              (click)="loginWithGoogle()"
+              type="button"
+              class="w-full text-white bg-yellow-600 hover:bg-yellow-700 focus:ring-4 focus:outline-none focus:ring-[#4285F4]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center flex justify-center items-center transition-all duration-300 hover:shadow-lg hover:shadow-yellow-500/50 transform hover:-translate-y-1"
+            >
+              <svg
+                class="w-4 h-4 me-2"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 18 19"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M8.842 18.083a8.8 8.8 0 0 1-8.65-8.948 8.841 8.841 0 0 1 8.8-8.652h.153a8.464 8.464 0 0 1 5.7 2.257l-2.193 2.038A5.27 5.27 0 0 0 9.09 3.4a5.882 5.882 0 0 0-.2 11.76h.124a5.091 5.091 0 0 0 5.248-4.057L14.3 11H9V8h8.34c.066.543.095 1.09.088 1.636-.086 5.053-3.463 8.449-8.4 8.449l-.186-.002Z"
+                  clip-rule="evenodd"
+                />
               </svg>
               Iniciar Sesión con Google
             </button>
 
-            <p class="text-sm font-light text-white transition-all duration-300 hover:text-blue-200">
-              ¿No tienes una cuenta? <a routerLink="/register" class="font-medium text-primary-600 hover:underline dark:text-primary-500 hover:text-blue-300">Registrate</a>
+            <p
+              class="text-sm font-light text-white transition-all duration-300 hover:text-blue-200"
+            >
+              ¿No tienes una cuenta?
+              <a
+                routerLink="/register"
+                class="font-medium text-primary-600 hover:underline dark:text-primary-500 hover:text-blue-300"
+                >Registrate</a
+              >
             </p>
           </form>
         </div>
